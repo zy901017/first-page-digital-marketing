@@ -98,7 +98,7 @@
   .container { max-width: 1200px; margin: 0 auto; }
 
   /* ─── TYPOGRAPHY ─── */
-  h1 { font-family: var(--font-head); font-weight: 800; font-size: clamp(2.6rem, 6vw, 5rem); letter-spacing: -0.04em; line-height: 1.05; }
+  h1 { font-family: var(--font-head); font-weight: 800; font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -0.04em; line-height: 1.05; overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
   h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -0.03em; line-height: 1.15; }
   h3 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.4rem); letter-spacing: -0.02em; }
   p { color: var(--text-soft); font-size: 1rem; line-height: 1.75; }
@@ -154,15 +154,15 @@
     background: radial-gradient(ellipse at center, rgba(26,109,255,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
-  .hero-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
+  .hero-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 5rem 5%; width: 100%; }
   .hero-kicker {
     display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;
   }
   .hero-kicker-line { width: 32px; height: 2px; background: var(--blue); }
   .hero-kicker span { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-bright); }
-  .hero h1 { max-width: 820px; margin-bottom: 1.5rem; }
+  .hero h1 { max-width: min(820px, 100%); margin-bottom: 1.5rem; }
   .hero h1 em { font-style: normal; color: var(--blue-bright); }
-  .hero-sub { font-size: 1.15rem; max-width: 560px; color: var(--text-soft); margin-bottom: 2.5rem; line-height: 1.7; }
+  .hero-sub { font-size: 1.1rem; max-width: min(560px, 100%); color: var(--text-soft); margin-bottom: 2.5rem; line-height: 1.7; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .hero-metrics {
@@ -478,6 +478,8 @@
   }
 
   /* ─── RESPONSIVE ─── */
+
+  /* Tablet: 1024px and below */
   @media (max-width: 1024px) {
     .hero-metrics { grid-template-columns: repeat(2,1fr); }
     .services-grid { grid-template-columns: repeat(2,1fr); }
@@ -485,35 +487,114 @@
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     .service-full-body-grid { grid-template-columns: 1fr; }
     .about-team { grid-template-columns: repeat(2,1fr); }
-  }
-  @media (max-width: 768px) {
-    section { padding: 4rem 5%; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .hero { min-height: auto; padding: 2rem 0; }
-    .hero-metrics { grid-template-columns: repeat(2,1fr); }
-    .services-grid { grid-template-columns: 1fr; }
-    .case-grid { grid-template-columns: 1fr; }
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .process-steps { grid-template-columns: 1fr; }
-    .process-step { border-right: none; border-bottom: 1px solid var(--border); }
-    .case-full-header { grid-template-columns: 1fr; }
-    .about-values { grid-template-columns: 1fr; }
-    .about-team { grid-template-columns: repeat(2,1fr); }
-    .insights-grid { grid-template-columns: 1fr; }
-    .contact-layout { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-    .service-full-header { flex-direction: column; padding: 2rem; }
-    .service-full-body { padding: 2rem; }
-    .case-full-header { padding: 2rem; }
-    .case-full-body { padding: 2rem; }
-    .case-full-results { grid-template-columns: 1fr; }
-    .hero-ctas { flex-direction: column; }
+    .case-grid { grid-template-columns: repeat(2,1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2,1fr); }
+    .insights-grid { grid-template-columns: repeat(2,1fr); }
   }
 
-  /* ─── ANIMATIONS ─── */
+  /* Mobile: 768px and below */
+  @media (max-width: 768px) {
+    /* Base */
+    section { padding: 3.5rem 1.25rem; }
+    h1 { font-size: clamp(2rem, 9vw, 2.8rem); word-break: break-word; }
+    h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+    h3 { font-size: 1rem; }
+
+    /* Nav */
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    /* Hero — fix clipping and layout */
+    .hero { min-height: auto; }
+    .hero-inner { padding: 3rem 1.25rem 2.5rem; }
+    .hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
+    .hero-sub { font-size: 1rem; max-width: 100%; }
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-secondary { width: 100%; text-align: center; padding: 1rem; font-size: 1rem; }
+    .hero-metrics { grid-template-columns: repeat(2,1fr); margin-top: 2.5rem; }
+    .hero-metric { padding: 1.25rem; }
+    .hero-metric-val { font-size: 1.6rem; }
+
+    /* Services grid */
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 1.75rem; }
+
+    /* Case studies */
+    .case-grid { grid-template-columns: 1fr; }
+
+    /* Process */
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem; }
+    .process-step:last-child { border-bottom: none; }
+
+    /* Testimonials */
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    /* Final CTA */
+    .final-cta { padding: 4rem 1.25rem; }
+    .final-cta h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+    .final-cta .btn-primary { width: 100%; max-width: 320px; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+    footer { padding: 3rem 1.25rem 2rem; }
+
+    /* Services page */
+    .service-full-header { flex-direction: column; padding: 1.5rem; gap: 1.25rem; }
+    .service-full-header .btn-primary { width: 100%; text-align: center; }
+    .service-full-body { padding: 1.5rem; }
+    .service-full-body-grid { grid-template-columns: 1fr; }
+
+    /* Case studies page */
+    .case-full-header { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
+    .case-full-body { padding: 1.5rem; }
+    .case-full-results { grid-template-columns: 1fr; }
+    .chart-placeholder { padding: 2rem 1.25rem; }
+
+    /* About page */
+    .about-values { grid-template-columns: 1fr; }
+    .about-team { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    .value-card { padding: 1.5rem; }
+
+    /* Insights page */
+    .insights-grid { grid-template-columns: 1fr; }
+
+    /* Contact page */
+    .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-form { padding: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+
+    /* Section headers */
+    .section-header { margin-bottom: 2.5rem; }
+    .section-header p { font-size: 0.9rem; }
+  }
+
+  /* Small mobile: 430px and below */
+  @media (max-width: 430px) {
+    .hero h1 { font-size: clamp(1.9rem, 9.5vw, 2.4rem); }
+    .hero-metrics { grid-template-columns: repeat(2,1fr); }
+    .hero-metric-val { font-size: 1.4rem; }
+    .about-team { grid-template-columns: 1fr 1fr; }
+    .service-full-header { padding: 1.25rem; }
+    .service-full-body { padding: 1.25rem; }
+    .case-full-header { padding: 1.25rem; }
+    .case-full-body { padding: 1.25rem; }
+    .contact-form { padding: 1.25rem; }
+    section { padding: 3rem 1rem; }
+    footer { padding: 2.5rem 1rem 1.5rem; }
+    .final-cta { padding: 3.5rem 1rem; }
+  }
+
+  /* ─── ABOUT INTRO ─── */
+  .about-intro-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start; margin-bottom: 5rem;
+  }
+  @media (max-width: 768px) {
+    .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+  }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -832,7 +913,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a>hello@thefirstpage.com.au</a></li>
+          <li><a><span class="__cf_email__" data-cfemail="89e1ece5e5e6c9fde1ecefe0fbfafdf9e8eeeca7eae6e4a7e8fc">[email&#160;protected]</span></a></li>
           <li><a>Sydney, NSW</a></li>
           <li><a onclick="navigate('contact')">Book a Strategy Call</a></li>
         </ul>
@@ -1070,7 +1151,7 @@
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO & Organic</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li><li><a onclick="navigateTo('services','svc-cro')">CRO</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a>hello@thefirstpage.com.au</a></li><li><a>Sydney, NSW</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="5d35383131321d2935383b342f2e292d3c3a38733e3230733c28">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing. All rights reserved.</p><p>ABN: 00 000 000 000</p></div>
   </footer>
@@ -1231,7 +1312,7 @@
       <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li><li><a onclick="navigateTo('services','svc-cro')">CRO</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a>hello@thefirstpage.com.au</a></li><li><a>Sydney, NSW</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="533b363f3f3c13273b36353a212027233234367d303c3e7d3226">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
   </footer>
@@ -1241,7 +1322,7 @@
 <div id="page-about" class="page">
   <section>
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:5rem;" class="about-intro-grid">
+      <div class="about-intro-grid">
         <div>
           <div class="tag">About</div>
           <h2>We're a performance agency, not a marketing agency.</h2>
@@ -1330,7 +1411,7 @@
       <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a>hello@thefirstpage.com.au</a></li><li><a>Sydney, NSW</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="afc7cac3c3c0efdbc7cac9c6dddcdbdfcec8ca81ccc0c281ceda">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
   </footer>
@@ -1407,7 +1488,7 @@
       <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a>hello@thefirstpage.com.au</a></li><li><a>Sydney, NSW</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="523a373e3e3d12263a37343b202126223335377c313d3f7c3327">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
   </footer>
@@ -1503,13 +1584,13 @@
       <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a>hello@thefirstpage.com.au</a></li><li><a>Sydney, NSW</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="8ce4e9e0e0e3ccf8e4e9eae5fefff8fcedebe9a2efe3e1a2edf9">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
   </footer>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ─── PAGE ROUTER ───
   function navigate(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1533,29 +1614,4 @@
     // Double rAF ensures the page has painted before we measure the anchor position
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        const anchor = document.getElementById(anchorId);
-        if (anchor) {
-          const offset = anchor.getBoundingClientRect().top + window.scrollY - 90;
-          window.scrollTo({ top: offset, behavior: 'smooth' });
-        }
-      });
-    });
-  }
-
-  // ─── MOBILE MENU ───
-  function toggleMobile() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  // ─── ABOUT GRID RESPONSIVE ───
-  function checkAboutGrid() {
-    const grid = document.querySelector('.about-intro-grid');
-    if (grid) {
-      grid.style.gridTemplateColumns = window.innerWidth <= 768 ? '1fr' : '1fr 1fr';
-    }
-  }
-  window.addEventListener('resize', checkAboutGrid);
-  checkAboutGrid();
-</script>
-</body>
-</html>
+        const anchor = document.getElementBy
