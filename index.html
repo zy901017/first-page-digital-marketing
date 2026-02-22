@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The First Page Digital Marketing | Performance-Led Growth Agency</title>
+<meta name="description" content="The First Page Digital Marketing is an Australian performance agency specialising in Paid Media, SEO, Analytics, CRM and CRO. We deliver measurable ROI across Google Ads, YouTube, Meta and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --charcoal: #111214;
+    --dark: #161820;
+    --mid: #1e2026;
+    --border: #252830;
+    --muted: #3a3e4a;
+    --text-dim: #6b7280;
+    --text-soft: #9ca3af;
+    --white: #f5f6f8;
+    --white-pure: #ffffff;
+    --blue: #1a6dff;
+    --blue-bright: #3d85ff;
+    --blue-glow: rgba(26,109,255,0.18);
+    --blue-line: rgba(26,109,255,0.35);
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 70px;
+    background: rgba(10,10,10,0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .logo {
+    font-family: var(--font-head);
+    font-size: 1rem; font-weight: 800;
+    color: var(--white-pure);
+    cursor: pointer;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .logo span { color: var(--blue-bright); }
+  .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+  .nav-links a {
+    font-family: var(--font-body); font-size: 0.875rem; font-weight: 500;
+    color: var(--text-soft); text-decoration: none; letter-spacing: 0.02em;
+    transition: color 0.2s; cursor: pointer;
+  }
+  .nav-links a:hover { color: var(--white-pure); }
+  .nav-cta {
+    background: var(--blue); color: var(--white-pure) !important;
+    padding: 0.55rem 1.25rem; border-radius: 6px;
+    font-weight: 500 !important; transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--blue-bright) !important; color: var(--white-pure) !important; }
+
+  /* Hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+  .mobile-menu {
+    display: none; position: fixed; top: 70px; left: 0; right: 0;
+    background: var(--charcoal); border-bottom: 1px solid var(--border);
+    padding: 1.5rem 5%; flex-direction: column; gap: 1.25rem; z-index: 999;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 1rem; color: var(--text-soft); text-decoration: none;
+    font-weight: 500; cursor: pointer; transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--white-pure); }
+
+  /* ─── PAGE SYSTEM ─── */
+  .page { display: none; padding-top: 70px; }
+  .page.active { display: block; }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 6rem 5%; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* ─── TYPOGRAPHY ─── */
+  h1 { font-family: var(--font-head); font-weight: 800; font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -0.04em; line-height: 1.05; overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
+  h2 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -0.03em; line-height: 1.15; }
+  h3 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.4rem); letter-spacing: -0.02em; }
+  p { color: var(--text-soft); font-size: 1rem; line-height: 1.75; }
+
+  .tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--blue-bright); background: var(--blue-glow);
+    border: 1px solid var(--blue-line);
+    padding: 0.3rem 0.8rem; border-radius: 4px; margin-bottom: 1.5rem;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    display: inline-block; background: var(--blue); color: var(--white-pure);
+    padding: 0.85rem 2rem; border-radius: 7px; font-family: var(--font-body);
+    font-weight: 500; font-size: 0.95rem; text-decoration: none;
+    cursor: pointer; border: none; transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { background: var(--blue-bright); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-block; background: transparent;
+    border: 1px solid var(--muted); color: var(--white);
+    padding: 0.85rem 2rem; border-radius: 7px;
+    font-family: var(--font-body); font-weight: 500; font-size: 0.95rem;
+    text-decoration: none; cursor: pointer; transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--blue-bright); color: var(--blue-bright); }
+
+  /* ─── DIVIDER ─── */
+  .divider { height: 1px; background: var(--border); margin: 0; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: calc(100vh - 70px);
+    display: flex; align-items: center;
+    background: var(--black);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -200px; right: -100px;
+    width: 700px; height: 700px;
+    background: radial-gradient(ellipse at center, rgba(26,109,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -100px; left: -50px;
+    width: 400px; height: 400px;
+    background: radial-gradient(ellipse at center, rgba(26,109,255,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 5rem 5%; width: 100%; }
+  .hero-kicker {
+    display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;
+  }
+  .hero-kicker-line { width: 32px; height: 2px; background: var(--blue); }
+  .hero-kicker span { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-bright); }
+  .hero h1 { max-width: min(820px, 100%); margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: normal; color: var(--blue-bright); }
+  .hero-sub { font-size: 1.1rem; max-width: min(560px, 100%); color: var(--text-soft); margin-bottom: 2.5rem; line-height: 1.7; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .hero-metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 10px;
+    margin-top: 5rem; overflow: hidden;
+  }
+  .hero-metric {
+    background: var(--charcoal); padding: 1.75rem 2rem;
+  }
+  .hero-metric-val {
+    font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+    color: var(--white-pure); letter-spacing: -0.03em;
+  }
+  .hero-metric-val span { color: var(--blue-bright); }
+  .hero-metric-label { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.3rem; letter-spacing: 0.02em; }
+
+  /* ─── SERVICES OVERVIEW ─── */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border); border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .service-card {
+    background: var(--charcoal); padding: 2.5rem;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--mid); }
+  .service-icon {
+    width: 42px; height: 42px; border-radius: 8px;
+    background: var(--blue-glow); border: 1px solid var(--blue-line);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem; font-size: 1.1rem;
+  }
+  .service-card h3 { margin-bottom: 0.75rem; font-size: 1.05rem; }
+  .service-card p { font-size: 0.9rem; line-height: 1.65; }
+  .service-card .learn-more {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    margin-top: 1.25rem; font-size: 0.82rem; font-weight: 600;
+    color: var(--blue-bright); letter-spacing: 0.04em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: gap 0.2s;
+  }
+  .service-card .learn-more:hover { gap: 0.7rem; }
+
+  /* ─── CASE STUDY CARDS ─── */
+  .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .case-card {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+  }
+  .case-card:hover { border-color: var(--blue-line); transform: translateY(-3px); }
+  .case-card-top {
+    background: var(--mid); padding: 1.75rem 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-industry {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--blue-bright); margin-bottom: 0.5rem; font-weight: 600;
+  }
+  .case-card-top h3 { font-size: 1rem; margin-bottom: 0; }
+  .case-card-body { padding: 1.75rem 2rem; }
+  .case-result {
+    display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.5rem;
+  }
+  .case-result-num {
+    font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+    color: var(--blue-bright); letter-spacing: -0.03em;
+  }
+  .case-result-label { font-size: 0.85rem; color: var(--text-soft); }
+  .case-card-body p { font-size: 0.875rem; margin-top: 0.75rem; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+  .case-tag {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-dim);
+    background: var(--dark); border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem; border-radius: 4px;
+  }
+
+  /* ─── PROCESS ─── */
+  .process-steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .process-step {
+    padding: 2.5rem 1.75rem; background: var(--charcoal);
+    border-right: 1px solid var(--border); position: relative;
+  }
+  .process-step:last-child { border-right: none; }
+  .process-num {
+    font-family: var(--font-head); font-size: 0.75rem; font-weight: 700;
+    color: var(--blue-bright); letter-spacing: 0.1em; margin-bottom: 1rem;
+  }
+  .process-step h3 { font-size: 1rem; margin-bottom: 0.6rem; }
+  .process-step p { font-size: 0.82rem; }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .testimonial {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 10px; padding: 2rem;
+  }
+  .testimonial-quote {
+    font-size: 0.95rem; color: var(--white); line-height: 1.7;
+    font-style: italic; margin-bottom: 1.5rem;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 0.85rem; }
+  .testimonial-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--blue-glow); border: 1px solid var(--blue-line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head); font-weight: 700; font-size: 0.85rem; color: var(--blue-bright);
+  }
+  .testimonial-name { font-size: 0.875rem; font-weight: 600; color: var(--white-pure); }
+  .testimonial-role { font-size: 0.78rem; color: var(--text-dim); }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    text-align: center; background: var(--charcoal);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 6rem 5%; position: relative; overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(26,109,255,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .final-cta h2 { max-width: 600px; margin: 0 auto 1.25rem; position: relative; }
+  .final-cta p { max-width: 460px; margin: 0 auto 2.5rem; position: relative; }
+  .final-cta .btn-primary { position: relative; font-size: 1rem; padding: 1rem 2.5rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black); border-top: 1px solid var(--border);
+    padding: 4rem 5% 2.5rem;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+  .footer-brand p { font-size: 0.875rem; margin-top: 1rem; max-width: 280px; }
+  .footer-col h4 {
+    font-family: var(--font-head); font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim);
+    margin-bottom: 1.25rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.65rem; }
+  .footer-col ul li a {
+    color: var(--text-soft); font-size: 0.875rem; text-decoration: none;
+    cursor: pointer; transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--blue-bright); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem;
+    max-width: 1200px; margin-left: auto; margin-right: auto;
+  }
+  .footer-bottom p { font-size: 0.8rem; color: var(--text-dim); }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header { margin-bottom: 4rem; }
+  .section-header.center { text-align: center; }
+  .section-header h2 { margin-bottom: 1rem; }
+  .section-header p { max-width: 520px; }
+  .section-header.center p { margin: 0 auto; }
+
+  /* ─── SERVICES PAGE ─── */
+  .service-full {
+    border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden; margin-bottom: 2rem;
+  }
+  .service-full-header {
+    background: var(--charcoal); padding: 2.5rem 3rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;
+  }
+  .service-full-body { padding: 2.5rem 3rem; background: var(--dark); }
+  .service-kpis { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .kpi-chip {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
+    padding: 0.35rem 0.85rem; border-radius: 20px;
+    background: var(--blue-glow); border: 1px solid var(--blue-line);
+    color: var(--blue-bright);
+  }
+  .service-full-body-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  }
+  .service-detail-col h4 {
+    font-family: var(--font-head); font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim);
+    margin-bottom: 0.85rem;
+  }
+  .service-detail-col ul { list-style: none; }
+  .service-detail-col ul li {
+    font-size: 0.875rem; color: var(--text-soft); padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.5rem;
+  }
+  .service-detail-col ul li::before { content: '→'; color: var(--blue-bright); font-size: 0.8rem; }
+
+  /* ─── CASE STUDIES PAGE ─── */
+  .case-full {
+    border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden; margin-bottom: 3rem;
+  }
+  .case-full-header {
+    background: var(--charcoal); padding: 3rem;
+    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;
+  }
+  .case-full-body { padding: 3rem; background: var(--dark); }
+  .case-full-results {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border); border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--border); margin-top: 2rem;
+  }
+  .case-full-result {
+    background: var(--charcoal); padding: 1.5rem;
+  }
+  .case-full-result-num {
+    font-family: var(--font-head); font-size: 1.8rem; font-weight: 800;
+    color: var(--blue-bright); letter-spacing: -0.03em;
+  }
+  .case-full-result-label { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
+  .chart-placeholder {
+    border: 1px dashed var(--border); border-radius: 8px;
+    padding: 3rem; text-align: center;
+    background: var(--charcoal); margin-top: 2rem;
+    color: var(--text-dim); font-size: 0.85rem;
+  }
+
+  /* ─── ABOUT ─── */
+  .about-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .value-card {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 10px; padding: 2rem;
+  }
+  .value-card h3 { margin-bottom: 0.75rem; font-size: 1rem; }
+  .about-team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .team-card {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; text-align: center;
+  }
+  .team-avatar {
+    height: 160px; background: var(--mid);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head); font-size: 2.5rem; font-weight: 800;
+    color: var(--border);
+  }
+  .team-info { padding: 1.25rem; }
+  .team-name { font-weight: 600; font-size: 0.95rem; color: var(--white-pure); }
+  .team-title { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
+
+  /* ─── INSIGHTS ─── */
+  .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .insight-card {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  .insight-card:hover { border-color: var(--blue-line); }
+  .insight-img {
+    height: 180px; background: var(--mid);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .insight-body { padding: 1.75rem; }
+  .insight-meta { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.6rem; }
+  .insight-body h3 { font-size: 1rem; margin-bottom: 0.6rem; }
+  .insight-body p { font-size: 0.85rem; }
+
+  /* ─── CONTACT ─── */
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+  .contact-info h2 { margin-bottom: 1.25rem; }
+  .contact-info p { margin-bottom: 2rem; }
+  .contact-trust { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+  .trust-item { display: flex; align-items: center; gap: 0.75rem; }
+  .trust-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--blue-glow); border: 1px solid var(--blue-line);
+    display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;
+  }
+  .trust-text { font-size: 0.875rem; color: var(--text-soft); }
+  .contact-form {
+    background: var(--charcoal); border: 1px solid var(--border);
+    border-radius: 12px; padding: 2.5rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label {
+    display: block; font-size: 0.8rem; font-weight: 600;
+    color: var(--text-soft); margin-bottom: 0.5rem; letter-spacing: 0.04em;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; background: var(--dark); border: 1px solid var(--border);
+    color: var(--white); font-family: var(--font-body); font-size: 0.9rem;
+    padding: 0.8rem 1rem; border-radius: 7px; outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--blue);
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); }
+  .form-group select option { background: var(--charcoal); }
+  .form-group textarea { height: 110px; resize: vertical; }
+  .calendly-placeholder {
+    margin-top: 2rem; border: 1px dashed var(--border); border-radius: 8px;
+    padding: 2rem; text-align: center; background: var(--dark);
+  }
+  .calendly-placeholder p { font-size: 0.875rem; }
+  .calendly-placeholder a {
+    display: inline-block; margin-top: 1rem;
+    color: var(--blue-bright); font-weight: 600; text-decoration: none; font-size: 0.9rem;
+  }
+
+  /* ─── RESPONSIVE ─── */
+
+  /* Tablet: 1024px and below */
+  @media (max-width: 1024px) {
+    .hero-metrics { grid-template-columns: repeat(2,1fr); }
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+    .process-steps { grid-template-columns: repeat(3,1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .service-full-body-grid { grid-template-columns: 1fr; }
+    .about-team { grid-template-columns: repeat(2,1fr); }
+    .case-grid { grid-template-columns: repeat(2,1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2,1fr); }
+    .insights-grid { grid-template-columns: repeat(2,1fr); }
+  }
+
+  /* Mobile: 768px and below */
+  @media (max-width: 768px) {
+    /* Base */
+    section { padding: 3.5rem 1.25rem; }
+    h1 { font-size: clamp(2rem, 9vw, 2.8rem); word-break: break-word; }
+    h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+    h3 { font-size: 1rem; }
+
+    /* Nav */
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    /* Hero — fix clipping and layout */
+    .hero { min-height: auto; }
+    .hero-inner { padding: 3rem 1.25rem 2.5rem; }
+    .hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
+    .hero-sub { font-size: 1rem; max-width: 100%; }
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-secondary { width: 100%; text-align: center; padding: 1rem; font-size: 1rem; }
+    .hero-metrics { grid-template-columns: repeat(2,1fr); margin-top: 2.5rem; }
+    .hero-metric { padding: 1.25rem; }
+    .hero-metric-val { font-size: 1.6rem; }
+
+    /* Services grid */
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 1.75rem; }
+
+    /* Case studies */
+    .case-grid { grid-template-columns: 1fr; }
+
+    /* Process */
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem; }
+    .process-step:last-child { border-bottom: none; }
+
+    /* Testimonials */
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    /* Final CTA */
+    .final-cta { padding: 4rem 1.25rem; }
+    .final-cta h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+    .final-cta .btn-primary { width: 100%; max-width: 320px; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+    footer { padding: 3rem 1.25rem 2rem; }
+
+    /* Services page */
+    .service-full-header { flex-direction: column; padding: 1.5rem; gap: 1.25rem; }
+    .service-full-header .btn-primary { width: 100%; text-align: center; }
+    .service-full-body { padding: 1.5rem; }
+    .service-full-body-grid { grid-template-columns: 1fr; }
+
+    /* Case studies page */
+    .case-full-header { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
+    .case-full-body { padding: 1.5rem; }
+    .case-full-results { grid-template-columns: 1fr; }
+    .chart-placeholder { padding: 2rem 1.25rem; }
+
+    /* About page */
+    .about-values { grid-template-columns: 1fr; }
+    .about-team { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    .value-card { padding: 1.5rem; }
+
+    /* Insights page */
+    .insights-grid { grid-template-columns: 1fr; }
+
+    /* Contact page */
+    .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-form { padding: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+
+    /* Section headers */
+    .section-header { margin-bottom: 2.5rem; }
+    .section-header p { font-size: 0.9rem; }
+  }
+
+  /* Small mobile: 430px and below */
+  @media (max-width: 430px) {
+    .hero h1 { font-size: clamp(1.9rem, 9.5vw, 2.4rem); }
+    .hero-metrics { grid-template-columns: repeat(2,1fr); }
+    .hero-metric-val { font-size: 1.4rem; }
+    .about-team { grid-template-columns: 1fr 1fr; }
+    .service-full-header { padding: 1.25rem; }
+    .service-full-body { padding: 1.25rem; }
+    .case-full-header { padding: 1.25rem; }
+    .case-full-body { padding: 1.25rem; }
+    .contact-form { padding: 1.25rem; }
+    section { padding: 3rem 1rem; }
+    footer { padding: 2.5rem 1rem 1.5rem; }
+    .final-cta { padding: 3.5rem 1rem; }
+  }
+
+  /* ─── ABOUT INTRO ─── */
+  .about-intro-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start; margin-bottom: 5rem;
+  }
+  @media (max-width: 768px) {
+    .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate { animation: fadeUp 0.6s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="logo" onclick="navigate('home')">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div>
+  <div class="nav-links">
+    <a onclick="navigate('home')">Home</a>
+    <a onclick="navigate('services')">Services</a>
+    <a onclick="navigate('case-studies')">Case Studies</a>
+    <a onclick="navigate('about')">About</a>
+    <a onclick="navigate('insights')">Insights</a>
+    <a onclick="navigate('contact')" class="nav-cta">Book a Strategy Call</a>
+  </div>
+  <div class="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="navigate('home');toggleMobile()">Home</a>
+  <a onclick="navigate('services');toggleMobile()">Services</a>
+  <a onclick="navigate('case-studies');toggleMobile()">Case Studies</a>
+  <a onclick="navigate('about');toggleMobile()">About</a>
+  <a onclick="navigate('insights');toggleMobile()">Insights</a>
+  <a onclick="navigate('contact');toggleMobile()">Book a Strategy Call</a>
+</div>
+
+<!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-kicker animate">
+        <div class="hero-kicker-line"></div>
+        <span>Australian Performance Agency</span>
+      </div>
+      <h1 class="animate delay-1">Turn Performance<br>Into <em>Profit.</em></h1>
+      <p class="hero-sub animate delay-2">We build scalable digital growth systems that deliver measurable ROI — from first click to closed deal.</p>
+      <div class="hero-ctas animate delay-3">
+        <button class="btn-primary" onclick="navigate('contact')">Book a Strategy Call</button>
+        <button class="btn-secondary" onclick="navigate('case-studies')">View Case Studies</button>
+      </div>
+
+      <div class="hero-metrics animate">
+        <div class="hero-metric">
+          <div class="hero-metric-val">$10M<span>+</span></div>
+          <div class="hero-metric-label">Managed Ad Spend</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-val">4.2<span>×</span></div>
+          <div class="hero-metric-label">Average ROAS</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-val">30<span>%</span></div>
+          <div class="hero-metric-label">Avg. CPL Reduction</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-val">100<span>+</span></div>
+          <div class="hero-metric-label">Campaigns Launched</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">What We Do</div>
+        <h2>Growth services built around commercial outcomes</h2>
+        <p>Every engagement is structured around one thing: moving the metrics that matter to your business.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Paid Media</h3>
+          <p>Google Ads, YouTube and Meta campaigns engineered for ROAS. We manage budget allocation, creative testing and bidding strategy to drive qualified pipeline.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-paid-media')">See More →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>SEO & Organic Growth</h3>
+          <p>Technical SEO, content infrastructure and link authority built to compound over time. Lower CAC, higher LTV from organic traffic that you own.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-seo')">See More →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Analytics & Tracking</h3>
+          <p>GA4, GTM and server-side tracking built properly. No attribution blind spots. Every dollar traced from impression to revenue.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-analytics')">See More →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔗</div>
+          <h3>CRM & Automation</h3>
+          <p>HubSpot, Salesforce and custom CRM integrations that align marketing data with your sales pipeline. Automate follow-up. Reduce leak. Close faster.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-crm')">See More →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>Conversion Rate Optimisation</h3>
+          <p>Data-led A/B testing, landing page redesign and UX audit. We increase the percentage of visitors who convert — multiplying the value of every media dollar.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-cro')">See More →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🗺️</div>
+          <h3>Full-Funnel Strategy</h3>
+          <p>Coordinated strategy across every touchpoint — awareness to acquisition to retention. Coherent messaging, consistent measurement, compounding results.</p>
+          <a class="learn-more" onclick="navigateTo('services','svc-paid-media')">See More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CASE STUDIES PREVIEW -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Case Studies</div>
+        <h2>Results from the campaigns we run</h2>
+        <p>Commercially grounded outcomes across multiple sectors and spend levels.</p>
+      </div>
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-card-top">
+            <div class="case-industry">E-Commerce / Retail</div>
+            <h3>National Homewares Retailer</h3>
+          </div>
+          <div class="case-card-body">
+            <div class="case-result">
+              <div class="case-result-num">5.1×</div>
+              <div class="case-result-label">ROAS on Google Shopping</div>
+            </div>
+            <p>Rebuilt campaign structure from the ground up, implemented product-level bidding and cut wasted spend by 38%.</p>
+            <div class="case-tags">
+              <span class="case-tag">Google Ads</span>
+              <span class="case-tag">Shopping</span>
+              <span class="case-tag">CRO</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-card-top">
+            <div class="case-industry">B2B / SaaS</div>
+            <h3>Enterprise Software Platform</h3>
+          </div>
+          <div class="case-card-body">
+            <div class="case-result">
+              <div class="case-result-num">41%</div>
+              <div class="case-result-label">CPL Reduction in 90 Days</div>
+            </div>
+            <p>Rebuilt LinkedIn and Google demand-gen strategy, introduced revenue-based bidding tied directly to CRM pipeline data.</p>
+            <div class="case-tags">
+              <span class="case-tag">Paid Search</span>
+              <span class="case-tag">CRM</span>
+              <span class="case-tag">Analytics</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-card-top">
+            <div class="case-industry">Healthcare / Allied Health</div>
+            <h3>Multi-Location Allied Health Group</h3>
+          </div>
+          <div class="case-card-body">
+            <div class="case-result">
+              <div class="case-result-num">3.8×</div>
+              <div class="case-result-label">Increase in Qualified Bookings</div>
+            </div>
+            <p>Local SEO, Google Ads and CRO overhaul across 12 locations. Unified tracking gave full visibility across the patient acquisition funnel.</p>
+            <div class="case-tags">
+              <span class="case-tag">SEO</span>
+              <span class="case-tag">Google Ads</span>
+              <span class="case-tag">Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem;text-align:center;">
+        <button class="btn-secondary" onclick="navigate('case-studies')">View All Case Studies</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <section style="background:var(--charcoal);">
+    <div class="container">
+      <div class="section-header center">
+        <div class="tag">Our Approach</div>
+        <h2>How we build growth systems</h2>
+        <p>A structured five-stage methodology applied consistently across every engagement.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-num">01 — DISCOVER</div>
+          <h3>Discover</h3>
+          <p>Commercial audit. Competitive landscape. Attribution diagnosis. We identify exactly where your funnel is leaking revenue.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">02 — ARCHITECT</div>
+          <h3>Architect</h3>
+          <p>Full-funnel strategy design. Channel mix, budget allocation, tracking infrastructure and KPI framework aligned to your business model.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">03 — EXECUTE</div>
+          <h3>Execute</h3>
+          <p>Precise campaign launch. Creative production, landing page builds and CRM configuration — all in-house, no handoffs.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">04 — OPTIMISE</div>
+          <h3>Optimise</h3>
+          <p>Weekly performance review. Continuous testing of creative, copy, audience and bid strategy against revenue-based targets.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">05 — SCALE</div>
+          <h3>Scale</h3>
+          <p>Systematic budget scaling on proven winners. New channel expansion. Efficiency compounds as the system matures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-header center">
+        <div class="tag">Client Perspectives</div>
+        <h2>What our clients report</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-quote">"They came in, diagnosed our attribution problem within two weeks and rebuilt our tracking from the ground up. We finally understood which channels were actually driving revenue."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MK</div>
+            <div>
+              <div class="testimonial-name">Michelle K.</div>
+              <div class="testimonial-role">Head of Marketing, Series B SaaS</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">"Our Google Ads CPL dropped 34% in the first 60 days. They don't make promises — they just show you the numbers every week and let the results speak."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JT</div>
+            <div>
+              <div class="testimonial-name">James T.</div>
+              <div class="testimonial-role">Director, National E-Commerce Brand</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">"We were sceptical about SEO timelines but the organic traffic growth was measurable within three months. By month six it was our lowest CAC channel."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div>
+              <div class="testimonial-name">Sarah R.</div>
+              <div class="testimonial-role">GM, Allied Health Group</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <div class="tag">Ready to Grow?</div>
+    <h2>Ready to dominate your category?</h2>
+    <p>Book a 45-minute strategy session. We'll audit your current setup and outline exactly where the growth is.</p>
+    <button class="btn-primary" onclick="navigate('contact')">Book Your Growth Strategy Session</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div>
+        <p>A results-driven performance agency for Australian businesses that take growth seriously.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li>
+          <li><a onclick="navigateTo('services','svc-seo')">SEO & Organic</a></li>
+          <li><a onclick="navigateTo('services','svc-analytics')">Analytics & Tracking</a></li>
+          <li><a onclick="navigateTo('services','svc-crm')">CRM & Automation</a></li>
+          <li><a onclick="navigateTo('services','svc-cro')">Conversion Rate Optimisation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a onclick="navigate('about')">About</a></li>
+          <li><a onclick="navigate('case-studies')">Case Studies</a></li>
+          <li><a onclick="navigate('insights')">Insights</a></li>
+          <li><a onclick="navigate('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a><span class="__cf_email__" data-cfemail="89e1ece5e5e6c9fde1ecefe0fbfafdf9e8eeeca7eae6e4a7e8fc">[email&#160;protected]</span></a></li>
+          <li><a>Sydney, NSW</a></li>
+          <li><a onclick="navigate('contact')">Book a Strategy Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The First Page Digital Marketing. All rights reserved.</p>
+      <p>ABN: 00 000 000 000</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════ SERVICES ═══════════════════════════════ -->
+<div id="page-services" class="page">
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Services</div>
+        <h2>Performance services built for commercial outcomes</h2>
+        <p>Every service is scoped, measured and reported against the metrics that matter to your business — ROAS, CPL, CAC, LTV and revenue growth.</p>
+      </div>
+
+      <div class="service-full" id="svc-paid-media">
+        <div class="service-full-header">
+          <div>
+            <div class="tag">01</div>
+            <h2>Paid Media</h2>
+            <p style="margin-top:0.75rem;max-width:500px;">Google Ads, YouTube and Meta campaigns built to generate revenue, not impressions. We manage strategy, creative, audience targeting and bid optimisation.</p>
+          </div>
+          <button class="btn-primary" onclick="navigate('contact')" style="flex-shrink:0;">Book a Strategy Call</button>
+        </div>
+        <div class="service-full-body">
+          <div class="service-full-body-grid">
+            <div class="service-detail-col">
+              <h4>What We Deliver</h4>
+              <ul>
+                <li>Google Search, Shopping & Performance Max</li>
+                <li>YouTube pre-roll and video campaigns</li>
+                <li>Meta Ads (Facebook & Instagram)</li>
+                <li>Audience segmentation and retargeting</li>
+                <li>Creative testing frameworks</li>
+                <li>Revenue-based bid strategy management</li>
+              </ul>
+            </div>
+            <div class="service-detail-col">
+              <h4>KPIs We Improve</h4>
+              <ul>
+                <li>Return on Ad Spend (ROAS)</li>
+                <li>Cost Per Lead (CPL)</li>
+                <li>Customer Acquisition Cost (CAC)</li>
+                <li>Click-Through Rate (CTR)</li>
+                <li>Conversion Rate</li>
+                <li>Revenue attributed to paid channels</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-kpis">
+            <span class="kpi-chip">Best suited for: E-commerce, Lead Gen, SaaS, Retail</span>
+            <span class="kpi-chip">Min. spend: $5K/month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-full" id="svc-seo">
+        <div class="service-full-header">
+          <div>
+            <div class="tag">02</div>
+            <h2>SEO & Organic Growth</h2>
+            <p style="margin-top:0.75rem;max-width:500px;">Technical SEO, content strategy and authority building that compounds over time. Own your search visibility and lower the cost of acquisition across your funnel.</p>
+          </div>
+          <button class="btn-primary" onclick="navigate('contact')" style="flex-shrink:0;">Book a Strategy Call</button>
+        </div>
+        <div class="service-full-body">
+          <div class="service-full-body-grid">
+            <div class="service-detail-col">
+              <h4>What We Deliver</h4>
+              <ul>
+                <li>Technical SEO audit and remediation</li>
+                <li>Keyword and intent mapping</li>
+                <li>Content strategy and production</li>
+                <li>Core Web Vitals optimisation</li>
+                <li>Link acquisition and authority building</li>
+                <li>Local SEO (Google Business Profile)</li>
+              </ul>
+            </div>
+            <div class="service-detail-col">
+              <h4>KPIs We Improve</h4>
+              <ul>
+                <li>Organic search rankings</li>
+                <li>Organic traffic volume and quality</li>
+                <li>CAC from organic channel</li>
+                <li>Domain authority score</li>
+                <li>Organic conversion rate</li>
+                <li>Share of voice vs. competitors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-kpis">
+            <span class="kpi-chip">Best suited for: B2B, Healthcare, E-commerce, Professional Services</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-full" id="svc-analytics">
+        <div class="service-full-header">
+          <div>
+            <div class="tag">03</div>
+            <h2>Analytics & Tracking Infrastructure</h2>
+            <p style="margin-top:0.75rem;max-width:500px;">You cannot optimise what you cannot measure. We implement tracking that is accurate, attribution-complete and reliable.</p>
+          </div>
+          <button class="btn-primary" onclick="navigate('contact')" style="flex-shrink:0;">Book a Strategy Call</button>
+        </div>
+        <div class="service-full-body">
+          <div class="service-full-body-grid">
+            <div class="service-detail-col">
+              <h4>What We Deliver</h4>
+              <ul>
+                <li>GA4 configuration and event setup</li>
+                <li>Google Tag Manager implementation</li>
+                <li>Server-side tracking (Stape, Elevar)</li>
+                <li>Attribution modelling and reporting</li>
+                <li>Custom Looker Studio dashboards</li>
+                <li>CRM to ad platform data sync</li>
+              </ul>
+            </div>
+            <div class="service-detail-col">
+              <h4>KPIs We Improve</h4>
+              <ul>
+                <li>Attribution accuracy</li>
+                <li>Data completeness rate</li>
+                <li>Revenue visibility across channels</li>
+                <li>Reporting speed and reliability</li>
+                <li>Signal quality for machine learning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-kpis">
+            <span class="kpi-chip">Best suited for: Any business running paid media or SEO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-full" id="svc-crm">
+        <div class="service-full-header">
+          <div>
+            <div class="tag">04</div>
+            <h2>CRM & Marketing Automation</h2>
+            <p style="margin-top:0.75rem;max-width:500px;">Connect your marketing activity to your sales pipeline. Automate lead nurturing, reduce manual handoffs and close more of the leads you're already generating.</p>
+          </div>
+          <button class="btn-primary" onclick="navigate('contact')" style="flex-shrink:0;">Book a Strategy Call</button>
+        </div>
+        <div class="service-full-body">
+          <div class="service-full-body-grid">
+            <div class="service-detail-col">
+              <h4>What We Deliver</h4>
+              <ul>
+                <li>HubSpot and Salesforce setup and migration</li>
+                <li>Lead scoring model configuration</li>
+                <li>Email nurture sequence design and build</li>
+                <li>Marketing and sales funnel alignment</li>
+                <li>CRM-to-ads data sync (offline conversions)</li>
+                <li>Lifecycle stage automation</li>
+              </ul>
+            </div>
+            <div class="service-detail-col">
+              <h4>KPIs We Improve</h4>
+              <ul>
+                <li>Lead-to-opportunity rate</li>
+                <li>Sales cycle length</li>
+                <li>Customer Lifetime Value (LTV)</li>
+                <li>Email open and conversion rates</li>
+                <li>Pipeline velocity</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-kpis">
+            <span class="kpi-chip">Best suited for: B2B, SaaS, Services, High-ticket products</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-full" id="svc-cro">
+        <div class="service-full-header">
+          <div>
+            <div class="tag">05</div>
+            <h2>Conversion Rate Optimisation</h2>
+            <p style="margin-top:0.75rem;max-width:500px;">Increase the percentage of visitors who take action. CRO multiplies the return on every dollar of media spend without increasing your budget.</p>
+          </div>
+          <button class="btn-primary" onclick="navigate('contact')" style="flex-shrink:0;">Book a Strategy Call</button>
+        </div>
+        <div class="service-full-body">
+          <div class="service-full-body-grid">
+            <div class="service-detail-col">
+              <h4>What We Deliver</h4>
+              <ul>
+                <li>Heuristic UX and funnel audit</li>
+                <li>Landing page redesign and testing</li>
+                <li>A/B and multivariate test management</li>
+                <li>Heatmap and session recording analysis</li>
+                <li>Form and checkout optimisation</li>
+                <li>Copy and CTA testing</li>
+              </ul>
+            </div>
+            <div class="service-detail-col">
+              <h4>KPIs We Improve</h4>
+              <ul>
+                <li>Conversion rate (%)</li>
+                <li>Revenue per visitor</li>
+                <li>Bounce rate on landing pages</li>
+                <li>Form completion rate</li>
+                <li>Cost per conversion</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-kpis">
+            <span class="kpi-chip">Best suited for: E-commerce, Lead Gen, SaaS</span>
+            <span class="kpi-chip">Min. 500 monthly conversions recommended</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="final-cta">
+    <div class="tag">Next Step</div>
+    <h2>Ready to dominate your category?</h2>
+    <p>Book a 45-minute strategy session. We'll audit your current setup and outline exactly where the growth is.</p>
+    <button class="btn-primary" onclick="navigate('contact')">Book Your Growth Strategy Session</button>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div>
+        <p>A results-driven performance agency for Australian businesses that take growth seriously.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO & Organic</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li><li><a onclick="navigateTo('services','svc-cro')">CRO</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="5d35383131321d2935383b342f2e292d3c3a38733e3230733c28">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing. All rights reserved.</p><p>ABN: 00 000 000 000</p></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════ CASE STUDIES ═══════════════════════════════ -->
+<div id="page-case-studies" class="page">
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Case Studies</div>
+        <h2>Commercially verified growth outcomes</h2>
+        <p>Detailed breakdowns of strategy, execution and results across multiple sectors and spend levels.</p>
+      </div>
+
+      <div class="case-full">
+        <div class="case-full-header">
+          <div>
+            <div class="case-industry">E-Commerce / Retail</div>
+            <h2 style="font-size:1.6rem;margin-top:0.5rem;">National Homewares Retailer — Google Shopping Overhaul</h2>
+            <p style="margin-top:0.75rem;">A high-volume retailer with $80K/month in Google Ads spend was generating a blended ROAS of 2.1× — well below their breakeven threshold of 3.5×.</p>
+          </div>
+          <div>
+            <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">Engagement Details</h4>
+            <div style="font-size:0.85rem;color:var(--text-soft);line-height:2;">
+              <div>Industry: E-Commerce</div>
+              <div>Monthly Spend: $80K</div>
+              <div>Duration: 4 months</div>
+              <div>Channels: Google Shopping, Search</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-full-body">
+          <h3 style="margin-bottom:0.75rem;">Challenge</h3>
+          <p>Campaigns were structured by product category with no product-level segmentation. High-converting SKUs and low-margin SKUs were bidding identically. Attribution was broken — view-through conversions were inflating reported ROAS by 40%.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Strategic Approach</h3>
+          <p>We rebuilt the campaign architecture from scratch: granular product segmentation by margin tier, revenue-based smart bidding targets set per product group, and full tracking remediation using server-side tagging to restore data accuracy.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Execution</h3>
+          <p>Product feed cleansing, campaign restructure in four weeks, GA4 + server-side tracking rebuild, Looker Studio dashboard tied to Shopify revenue data. Creative assets refreshed for top-performing categories.</p>
+          <div class="case-full-results">
+            <div class="case-full-result">
+              <div class="case-full-result-num">5.1×</div>
+              <div class="case-full-result-label">Blended ROAS (from 2.1×)</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">38%</div>
+              <div class="case-full-result-label">Reduction in Wasted Spend</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">$210K</div>
+              <div class="case-full-result-label">Additional Monthly Revenue</div>
+            </div>
+          </div>
+          <div class="chart-placeholder">
+            📊 Monthly ROAS trend chart — integrate your preferred charting library (Chart.js, Highcharts, Recharts) here
+          </div>
+        </div>
+      </div>
+
+      <div class="case-full">
+        <div class="case-full-header">
+          <div>
+            <div class="case-industry">B2B / SaaS</div>
+            <h2 style="font-size:1.6rem;margin-top:0.5rem;">Enterprise Software Platform — Demand Generation Rebuild</h2>
+            <p style="margin-top:0.75rem;">A Series B SaaS company with $45K/month in paid search was generating high MQL volume but poor SQL conversion — disconnect between marketing signals and sales-qualified criteria.</p>
+          </div>
+          <div>
+            <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">Engagement Details</h4>
+            <div style="font-size:0.85rem;color:var(--text-soft);line-height:2;">
+              <div>Industry: B2B SaaS</div>
+              <div>Monthly Spend: $45K</div>
+              <div>Duration: 3 months</div>
+              <div>Channels: Google Ads, LinkedIn</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-full-body">
+          <h3 style="margin-bottom:0.75rem;">Challenge</h3>
+          <p>CPL had risen 28% year-on-year. Campaigns were optimising toward form fills rather than pipeline-qualified leads. No offline conversion data was flowing back to Google Ads — machine learning was bidding blind.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Strategic Approach</h3>
+          <p>Implemented HubSpot-to-Google Ads offline conversion sync. Rebuilt bidding strategy around SQL events rather than MQL form fills. Restructured LinkedIn campaigns by company size and vertical to align with ICP.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Execution</h3>
+          <p>CRM integration build (4 weeks), campaign restructure and relaunch, creative and copy overhaul aligned with enterprise buying language, weekly SQLrate reporting dashboard delivered to marketing and sales leadership jointly.</p>
+          <div class="case-full-results">
+            <div class="case-full-result">
+              <div class="case-full-result-num">41%</div>
+              <div class="case-full-result-label">CPL Reduction in 90 Days</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">2.3×</div>
+              <div class="case-full-result-label">MQL-to-SQL Conversion Rate</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">$380K</div>
+              <div class="case-full-result-label">Additional Pipeline in Q1</div>
+            </div>
+          </div>
+          <div class="chart-placeholder">
+            📊 CPL trend and pipeline growth chart — integrate your preferred charting library here
+          </div>
+        </div>
+      </div>
+
+      <div class="case-full">
+        <div class="case-full-header">
+          <div>
+            <div class="case-industry">Healthcare / Allied Health</div>
+            <h2 style="font-size:1.6rem;margin-top:0.5rem;">Multi-Location Allied Health Group — Patient Acquisition</h2>
+            <p style="margin-top:0.75rem;">A group operating 12 clinics across NSW was running separate agency relationships per location with no unified measurement, inconsistent messaging and declining organic visibility.</p>
+          </div>
+          <div>
+            <h4 style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">Engagement Details</h4>
+            <div style="font-size:0.85rem;color:var(--text-soft);line-height:2;">
+              <div>Industry: Allied Health</div>
+              <div>Locations: 12</div>
+              <div>Duration: 6 months</div>
+              <div>Channels: SEO, Google Ads, GBP</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-full-body">
+          <h3 style="margin-bottom:0.75rem;">Challenge</h3>
+          <p>No unified patient acquisition funnel. Google Business Profiles were unclaimed or incomplete. Organic rankings had declined due to technical SEO issues. Google Ads campaigns had no conversion tracking beyond phone call clicks.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Strategic Approach</h3>
+          <p>Consolidated all digital into a single managed account. Rebuilt GBP profiles for all 12 locations. Implemented proper booking confirmation tracking (not just phone clicks). Technical SEO remediation and location-specific content strategy.</p>
+          <h3 style="margin:1.75rem 0 0.75rem;">Execution</h3>
+          <p>3-month SEO foundation build, parallel Google Ads launch with proper conversion tracking, GBP optimisation across all locations, Looker Studio patient acquisition dashboard tied to their practice management system.</p>
+          <div class="case-full-results">
+            <div class="case-full-result">
+              <div class="case-full-result-num">3.8×</div>
+              <div class="case-full-result-label">Increase in Qualified Bookings</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">62%</div>
+              <div class="case-full-result-label">Increase in Organic Traffic</div>
+            </div>
+            <div class="case-full-result">
+              <div class="case-full-result-num">44%</div>
+              <div class="case-full-result-label">Reduction in Cost Per Booking</div>
+            </div>
+          </div>
+          <div class="chart-placeholder">
+            📊 Monthly booking volume and organic traffic trend — integrate your preferred charting library here
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="final-cta">
+    <div class="tag">Your Turn</div>
+    <h2>Ready to dominate your category?</h2>
+    <p>Book a strategy session and we'll identify where your growth is being left on the table.</p>
+    <button class="btn-primary" onclick="navigate('contact')">Book Your Growth Strategy Session</button>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li><li><a onclick="navigateTo('services','svc-cro')">CRO</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="533b363f3f3c13273b36353a212027233234367d303c3e7d3226">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<div id="page-about" class="page">
+  <section>
+    <div class="container">
+      <div class="about-intro-grid">
+        <div>
+          <div class="tag">About</div>
+          <h2>We're a performance agency, not a marketing agency.</h2>
+        </div>
+        <div>
+          <p style="margin-bottom:1.25rem;">The First Page Digital Marketing was built for Australian businesses that are serious about growth. We don't operate on vanity metrics, inflated reach figures or unattributed "brand awareness" spend.</p>
+          <p style="margin-bottom:1.25rem;">Every campaign we run is tied to commercial outcomes. Every decision we make is grounded in data. Every month we provide transparent reporting that connects media spend to revenue.</p>
+          <p>We work with a focused portfolio of clients — not hundreds. That means your account gets senior attention, not junior account managers reading from playbooks.</p>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="tag">Our Values</div>
+        <h2>What we stand for</h2>
+      </div>
+      <div class="about-values">
+        <div class="value-card">
+          <h3>Commercial Accountability</h3>
+          <p>We report on revenue, ROAS, CPL and CAC — not impressions, likes or "engagement". If it doesn't connect to your P&L, it doesn't belong in our reporting.</p>
+        </div>
+        <div class="value-card">
+          <h3>Analytical Precision</h3>
+          <p>We build tracking infrastructure before we launch campaigns. No attribution guesswork. No inflated numbers. Every dollar of spend is traceable to an outcome.</p>
+        </div>
+        <div class="value-card">
+          <h3>Direct Communication</h3>
+          <p>We tell clients what's working and what isn't. If a channel underperforms, you'll hear it from us before you notice it in the numbers.</p>
+        </div>
+        <div class="value-card">
+          <h3>Long-Term Partnerships</h3>
+          <p>Our best client relationships are multi-year. Compounding growth requires continuity. We build systems, not campaigns.</p>
+        </div>
+        <div class="value-card">
+          <h3>No Conflicts of Interest</h3>
+          <p>We recommend channels based on what will deliver the best return for your business — not based on where we earn higher commissions.</p>
+        </div>
+        <div class="value-card">
+          <h3>Senior Involvement</h3>
+          <p>Your account is managed by experienced practitioners. Strategy is not delegated to junior staff. You have a direct line to the people making decisions.</p>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top:5rem;">
+        <div class="tag">The Team</div>
+        <h2>Senior practitioners, not account managers</h2>
+      </div>
+      <div class="about-team">
+        <div class="team-card">
+          <div class="team-avatar">AJ</div>
+          <div class="team-info">
+            <div class="team-name">Alex J.</div>
+            <div class="team-title">Founder & Head of Strategy</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">SR</div>
+          <div class="team-info">
+            <div class="team-name">Sam R.</div>
+            <div class="team-title">Head of Paid Media</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">CL</div>
+          <div class="team-info">
+            <div class="team-name">Chris L.</div>
+            <div class="team-title">Head of SEO & Content</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">MP</div>
+          <div class="team-info">
+            <div class="team-name">Morgan P.</div>
+            <div class="team-title">Analytics & Tracking Lead</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="final-cta">
+    <h2>Want to work with us?</h2>
+    <p>We take on a limited number of new clients per quarter. Book a strategy session to find out if we're the right fit.</p>
+    <button class="btn-primary" onclick="navigate('contact')">Book a Strategy Call</button>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="afc7cac3c3c0efdbc7cac9c6dddcdbdfcec8ca81ccc0c281ceda">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════ INSIGHTS ═══════════════════════════════ -->
+<div id="page-insights" class="page">
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">Insights</div>
+        <h2>Performance thinking for Australian businesses</h2>
+        <p>Practical, commercially grounded writing on paid media, SEO, analytics and digital growth strategy.</p>
+      </div>
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-img">📊</div>
+          <div class="insight-body">
+            <div class="insight-meta">Paid Media · 8 min read</div>
+            <h3>Why Your Google Ads ROAS Is Lying to You</h3>
+            <p>View-through conversions, cross-device attribution gaps and inflated smart bidding signals are making your campaigns look better than they are. Here's how to fix it.</p>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-img">🔍</div>
+          <div class="insight-body">
+            <div class="insight-meta">SEO · 11 min read</div>
+            <h3>The Business Case for Technical SEO in 2025</h3>
+            <p>Core Web Vitals, crawl budget and site architecture decisions that are quietly costing Australian businesses organic visibility — and how to fix them.</p>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-img">⚙️</div>
+          <div class="insight-body">
+            <div class="insight-meta">Analytics · 7 min read</div>
+            <h3>Server-Side Tracking: The Case for Migrating in 2025</h3>
+            <p>iOS changes, browser restrictions and GA4's client-side limitations mean your attribution data is less complete than you think. Server-side fixes this.</p>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-img">🎯</div>
+          <div class="insight-body">
+            <div class="insight-meta">CRO · 9 min read</div>
+            <h3>Landing Page Testing: What Most Agencies Get Wrong</h3>
+            <p>Underpowered tests, incorrect statistical significance thresholds and testing the wrong variables. A practical framework for CRO that actually moves revenue.</p>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-img">🔗</div>
+          <div class="insight-body">
+            <div class="insight-meta">CRM · 6 min read</div>
+            <h3>Connecting Your CRM to Google Ads: The Setup Most Businesses Skip</h3>
+            <p>Offline conversion imports are the most under-utilised performance lever in B2B paid media. Here's the exact setup we use for HubSpot and Salesforce clients.</p>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-img">📈</div>
+          <div class="insight-body">
+            <div class="insight-meta">Strategy · 12 min read</div>
+            <h3>Full-Funnel Attribution: A Framework for Australian Marketers</h3>
+            <p>How to build a measurement framework that connects brand awareness spend to closed revenue — and why most attribution models are structurally wrong.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="final-cta">
+    <h2>Want our thinking applied to your business?</h2>
+    <p>Book a strategy session and get a personalised performance audit.</p>
+    <button class="btn-primary" onclick="navigate('contact')">Book a Strategy Session</button>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="523a373e3e3d12263a37343b202126223335377c313d3f7c3327">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+<div id="page-contact" class="page">
+  <section>
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="tag">Contact</div>
+          <h2>Let's talk about your growth.</h2>
+          <p>We take on a focused portfolio of clients each quarter. Fill in the form and we'll review your business before the session — no generic call, no sales pitch.</p>
+          <div class="contact-trust">
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div class="trust-text">45-minute strategy session — no obligation</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div class="trust-text">Senior team member, not a business development rep</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div class="trust-text">We'll review your current accounts before the call</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div class="trust-text">Honest assessment — we'll tell you if we're not the right fit</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">📄</div>
+              <div class="trust-text"><strong style="color:var(--white);">Free Performance Audit PDF</strong> — included with every enquiry</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="contact-form">
+            <h3 style="margin-bottom:1.75rem;font-size:1.1rem;">Book a Strategy Session</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="Alex">
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Johnson">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Company *</label>
+              <input type="text" placeholder="Acme Pty Ltd">
+            </div>
+            <div class="form-group">
+              <label>Website</label>
+              <input type="url" placeholder="https://yourwebsite.com.au">
+            </div>
+            <div class="form-group">
+              <label>Work Email *</label>
+              <input type="email" placeholder="alex@company.com.au">
+            </div>
+            <div class="form-group">
+              <label>Monthly Advertising Budget</label>
+              <select>
+                <option value="" disabled selected>Select a range</option>
+                <option>Under $5,000/month</option>
+                <option>$5,000 – $15,000/month</option>
+                <option>$15,000 – $50,000/month</option>
+                <option>$50,000 – $150,000/month</option>
+                <option>$150,000+/month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>What are you aiming to achieve?</label>
+              <textarea placeholder="Tell us about your current challenges — e.g. high CPL, poor ROAS, limited visibility into attribution, need to scale…"></textarea>
+            </div>
+            <button class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">Submit Enquiry</button>
+            <p style="font-size:0.78rem;color:var(--text-dim);margin-top:1rem;text-align:center;">We respond to all enquiries within one business day.</p>
+          </div>
+
+          <div class="calendly-placeholder">
+            <p style="color:var(--text-dim);">Prefer to book directly? Use our calendar below.</p>
+            <a href="https://calendly.com" target="_blank">→ Open Calendly Booking Page</a>
+            <p style="color:var(--muted);font-size:0.75rem;margin-top:1rem;">Replace this block with your Calendly embed script</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">The <span>First</span> Page<br><small style="font-size:0.6rem;font-weight:500;color:var(--text-dim);letter-spacing:0.08em">DIGITAL MARKETING</small></div><p>A results-driven performance agency for Australian businesses.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="navigateTo('services','svc-paid-media')">Paid Media</a></li><li><a onclick="navigateTo('services','svc-seo')">SEO</a></li><li><a onclick="navigateTo('services','svc-analytics')">Analytics</a></li><li><a onclick="navigateTo('services','svc-crm')">CRM</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('case-studies')">Case Studies</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="8ce4e9e0e0e3ccf8e4e9eae5fefff8fcedebe9a2efe3e1a2edf9">[email&#160;protected]</span></a></li><li><a>Sydney, NSW</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The First Page Digital Marketing.</p><p>ABN: 00 000 000 000</p></div>
+  </footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ─── PAGE ROUTER ───
+  function navigate(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + page);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
+
+  // ─── NAVIGATE TO PAGE + SCROLL TO ANCHOR ───
+  function navigateTo(page, anchorId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + page);
+    if (!target) return;
+    target.classList.add('active');
+
+    // Scroll to top instantly so layout is stable before measuring anchor
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Double rAF ensures the page has painted before we measure the anchor position
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const anchor = document.getElementBy
